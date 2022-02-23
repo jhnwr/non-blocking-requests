@@ -6,7 +6,7 @@ start = perf_counter()
 
 import requests
 
-urls = range(1, 5000)
+urls = range(1, 25000)
 
 
 def get_data(url):
@@ -14,8 +14,10 @@ def get_data(url):
     print(r.json())
 
 
-with ThreadPoolExecutor(max_workers=12) as executor:
+with ThreadPoolExecutor() as executor:
     executor.map(get_data, urls)
 
 stop = perf_counter()
 print("time taken:", stop - start)
+
+# time taken: 37.273589322998305
