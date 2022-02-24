@@ -1,3 +1,6 @@
+# "threading is for working in parallel, and async is for waiting in parallel".
+
+
 import asyncio
 from time import perf_counter
 

@@ -1,3 +1,5 @@
+# "threading is for working in parallel, and async is for waiting in parallel".
+
 from concurrent.futures import ThreadPoolExecutor
 
 from time import perf_counter
